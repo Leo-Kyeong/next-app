@@ -12,6 +12,9 @@ This is a `Next.js` project bootstrapped with `create-next-app`.
 ```bash
 # run app
 npm run dev
+
+# run json-server
+npx json-server --port 9999 --watch db.json
 ```
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
@@ -26,5 +29,5 @@ This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-opti
 npm run build
 
 # start service
-num run start
+npm run start
 ```
