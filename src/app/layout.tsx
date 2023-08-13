@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 
 export default async function RootLayout({children}: {children: React.ReactNode}) {
 
-    const response = await fetch('http://localhost:9999/topics');
+    const response = await fetch('http://localhost:9999/topics', {cache: 'no-cache'});
     const topics = await response.json();
 
     return (
@@ -24,8 +24,6 @@ export default async function RootLayout({children}: {children: React.ReactNode}
                       </li>
                   )
               })}
-              <li><Link href='/read/1'>html</Link></li>
-              <li><Link href='/read/2'>css</Link></li>
           </ol>
             {children}
           <ul>
