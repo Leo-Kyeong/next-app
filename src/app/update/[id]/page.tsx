@@ -28,7 +28,7 @@ const Update = () => {
                 const title = event.target.title.value;
                 const body = event.target.body.value;
 
-                fetch(`http://localhost:9999/topics/` + params.id, {
+                fetch(process.env.NEXT_PUBLIC_API_URL + `topics/` + params.id, {
                     method: 'PATCH',
                     headers: {
                         'Content-Type': 'application/json'
